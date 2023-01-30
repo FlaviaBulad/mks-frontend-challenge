@@ -1,5 +1,15 @@
+import { FooterContainer } from "./StyledFooter";
+
 function Footer() {
-  return <h1>Im a footer component</h1>;
+  return (
+    <>
+      <FooterContainer>
+        <p className="footer-text">
+          MKS sistemas © Todos os direitos reservados
+        </p>
+      </FooterContainer>
+    </>
+  );
 }
 
 export default Footer;
