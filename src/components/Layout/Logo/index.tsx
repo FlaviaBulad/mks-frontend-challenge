@@ -1,8 +1,12 @@
+import { StyledLogo } from "./StyledLogo";
+
 function Logo() {
   return (
     <>
-      <h1>MKS</h1>
-      <h2>Sistemas</h2>
+      <StyledLogo>
+        <h1>MKS</h1>
+        <span>Sistemas</span>
+      </StyledLogo>
     </>
   );
 }
