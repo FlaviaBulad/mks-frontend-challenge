@@ -1,4 +1,13 @@
+import Card from "@/components/Product/Card/Card";
+import { ProductsContainer } from "./StyledProducts";
 function Products() {
-  return <h1>the products are going to be shown here</h1>;
+  return (
+    <ProductsContainer>
+      <ul className="card-wrapper"></ul>
+      <li className="card-component">
+        <Card />
+      </li>
+    </ProductsContainer>
+  );
 }
 export default Products;
