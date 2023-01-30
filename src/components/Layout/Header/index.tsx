@@ -1,7 +1,9 @@
+import Logo from "../Logo";
+
 function Header() {
   return (
     <>
-      <h1>This is the header component</h1>
+      <Logo />
     </>
   );
 }
