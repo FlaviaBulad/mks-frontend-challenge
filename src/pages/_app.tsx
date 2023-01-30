@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import { GlobalStyle } from "@/styles/globals";
 import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyle />
       <Header />
+      <Footer />
       <Component {...pageProps} />
     </>
   );
