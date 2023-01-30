@@ -5,7 +5,7 @@ function Logo() {
     <>
       <StyledLogo>
         <h1>MKS</h1>
-        <span>Sistemas</span>
+        <p>Sistemas</p>
       </StyledLogo>
     </>
   );

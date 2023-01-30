@@ -3,7 +3,11 @@ import styled from "styled-components";
 export const StyledLogo = styled.div`
   display: flex;
   align-items: flex-end;
-  gap: 0.5rem;
+  gap: 0.4rem;
+
+  @media (max-width: 768px) {
+    gap: 0.25rem;
+  }
 
   & > h1 {
     font-weight: 600;
@@ -12,19 +16,19 @@ export const StyledLogo = styled.div`
     color: #ffffff;
 
     @media (max-width: 768px) {
-      font-size: 1.25rem;
+      font-size: 2rem;
       line-height: 1.8rem;
     }
   }
-  & > span {
+  & > p {
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.8rem;
     color: #ffffff;
 
     @media (max-width: 768px) {
-      font-size: 1rem;
-      line-height: 1.25rem;
+      font-size: 0.85rem;
+      line-height: 1.4rem;
     }
   }
 `;

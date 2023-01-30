@@ -1,9 +1,12 @@
 import Logo from "../Logo";
+import { StyledHeader } from "./StyledHeader";
 
 function Header() {
   return (
     <>
-      <Logo />
+      <StyledHeader>
+        <Logo />
+      </StyledHeader>
     </>
   );
 }
