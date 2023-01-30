@@ -1,3 +1,4 @@
+import Cart from "@/components/Cart";
 import Logo from "../Logo";
 import { StyledHeader } from "./StyledHeader";
 
@@ -6,6 +7,7 @@ function Header() {
     <>
       <StyledHeader>
         <Logo />
+        <Cart />
       </StyledHeader>
     </>
   );
