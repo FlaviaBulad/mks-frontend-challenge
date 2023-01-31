@@ -2,6 +2,7 @@ import { SidebarContainer } from "./StyledSidebar";
 
 import { IoMdCloseCircle } from "react-icons/io";
 import { IconContext } from "react-icons";
+import ProductCard from "../ProductCard/index";
 
 function Sidebar() {
   return (
@@ -14,7 +15,9 @@ function Sidebar() {
       <IconContext.Provider value={{ className: "react-icons" }}>
         <IoMdCloseCircle />
       </IconContext.Provider>
-
+      <div className="cart-product-card-wrap">
+        <ProductCard />
+      </div>
       <footer className="footer-wrap">
         <div className="total">
           <p>Total: </p>
