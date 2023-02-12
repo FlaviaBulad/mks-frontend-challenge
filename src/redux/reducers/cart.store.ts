@@ -1,32 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { ICartProduct } from "@/interfaces/products/IProduct";
 
-const initialState: any = { items: [] };
+const initialState: ICartProduct[] = [];
 
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addProductToCart(state, action) {
-      const productIndex = state.items.findIndex(
-        (item: { id: number }) => item.id === action.payload.id
+    addProductToCart(state, context) {
+      const productIndex = state.find(
+        (product) => product.id === context.payload.id
       );
-
-      if (productIndex >= 0) {
-        state.items[productIndex].amount += 1;
+      if (productIndex) {
+        productIndex.amount += 1;
       } else {
-        state.items.push({
-          ...action.payload,
-          amount: 1,
-        });
+        state.push({ ...context.payload, amount: 1 });
       }
     },
-    removeProductFromCart(state, action) {
-      const productIndex = state.items.findIndex(
-        (item: { id: number }) => item.id === action.payload.id
+    removeProductFromCart(state, context) {
+      const productIndex = state.findIndex(
+        (product) => product.id === context.payload.id
       );
-
       if (productIndex >= 0) {
-        state.items[productIndex].amount -= 1;
+        if (state[productIndex].amount > 1) {
+          state[productIndex].amount -= 1;
+        } else {
+          state.splice(productIndex, 1);
+        }
       }
     },
   },
