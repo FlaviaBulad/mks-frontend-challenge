@@ -8,15 +8,15 @@ const api = axios.create({
   baseURL: "https://mks-frontend-challenge-api.herokuapp.com",
 });
 
-export default {
-  async getProducts(params: IApiParams): Promise<IProduct[] | undefined> {
-    try {
-      const response = await api.get<IApiResponse>("/api/v1/products", {
-        params,
-      });
-      return response.data.products;
-    } catch (err) {
-      console.error("Erro ao buscar produtos", err);
-    }
-  },
-};
+export default async function getProducts(
+  params: IApiParams
+): Promise<IProduct[] | undefined> {
+  try {
+    const response = await api.get<IApiResponse>("/api/v1/products", {
+      params,
+    });
+    return response.data.products;
+  } catch (err) {
+    console.error("Erro ao buscar produtos", err);
+  }
+}
